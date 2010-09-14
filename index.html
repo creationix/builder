@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sousaball</title>
+  <script src="app/main.js" type="text/javascript"></script>
+  <script language="javascript" type="text/javascript" charset="utf-8">
+  function onLoad() {
+      console.log("on load event");
+      if (window.PalmSystem) {
+          console.log("about to do palm stuff");
+          window.PalmSystem.stageReady();
+          console.log("did palm stuff");
+      }
+  }
+  </script>
+</head>
+<body onload="onLoad()"></body>
+</html>

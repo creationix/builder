@@ -1,0 +1,9 @@
+{
+	"id": "com.creationix.builder",
+	"version": "1.0.0",
+	"vendor": "Creationix",
+	"type": "web",
+	"main": "index.html",
+	"title": "Builder",
+	"icon": "icon.png"
+}
