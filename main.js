@@ -14,13 +14,19 @@ window.onload = function () {
   var ctx = canvas.getContext("2d");
 
 
-  ctx.moveTo(x, y);
 
-  ctx.beginPath();
+  var i = 0;
   setInterval(function () {
-      x += Math.random() * 10 - 5;
-      y += Math.random() * 10 - 5;
-      ctx.strokeStyle = 'rgb(128, 128, 128)';
+      i += 0.1;
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      x += Math.random() * 20 - 10;
+      y += Math.random() * 20 - 10;
+      if (x < 0) x = 0;
+      else if (x > WIDTH) x = WIDTH;
+      if (y < 0) y = 0;
+      else if (y > HEIGHT) y = HEIGHT;
+      ctx.strokeStyle = 'rgb(255, ' + Math.floor(Math.sin(i) * 128 + 128) + ', ' + Math.floor(Math.cos(i) * 128 + 128) + ')';
       ctx.lineTo(x, y);
       ctx.stroke();
   }, 10);
