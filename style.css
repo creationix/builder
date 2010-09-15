@@ -1,4 +1,13 @@
 body {
-    background-color: #222;
     margin: 0;
+    background-color: #000;
+}
+canvas {
+    background-color: #eee;
+    width: 320px;
+    heght: 480px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -160px 0 0 -160px;
 }
